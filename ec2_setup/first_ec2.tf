@@ -1,8 +1,5 @@
 provider "aws" {
-  version                 = 2.62
   region                  = "us-east-1"
-  shared_credentials_file = "/Users/japsahni/.aws/credentials"
-  profile                 = "terraform"
 }
 
 resource "aws_vpc" "my_vpc" {
