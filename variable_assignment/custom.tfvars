@@ -1,0 +1,1 @@
+instancetype = "m5.large"

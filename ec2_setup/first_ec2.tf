@@ -1,4 +1,5 @@
 provider "aws" {
+  version                 = 2.62
   region                  = "us-east-1"
   shared_credentials_file = "/Users/japsahni/.aws/credentials"
   profile                 = "terraform"
@@ -41,7 +42,7 @@ resource "aws_instance" "my_ec2" {
   }
 
   root_block_device {
-    delete_on_termination = false
+    delete_on_termination = true
     volume_size           = 8
   }
 
