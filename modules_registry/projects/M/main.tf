@@ -1,4 +1,4 @@
 module "ec2module" {
-    source = "https://github.com/japneet-sahni/Terraform-HandsOn/tree/master/terraform-aws-ec2"
+    source = "https://github.com/japneet-sahni/terraform-aws-ec2.git"
     # instance_type = "t2.micro"
 }
