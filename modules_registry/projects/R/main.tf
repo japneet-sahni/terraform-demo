@@ -1,6 +1,5 @@
 module "ec2_cluster" {
   source                 = "terraform-aws-modules/ec2-instance/aws"
-  version                = "~> 2.0"
 
   name                   = "my-cluster"
   instance_count         = 5

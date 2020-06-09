@@ -1,3 +1,3 @@
 variable "instancetype" {
-    default = "t2.nano"
+  default = "t2.nano"
 }
