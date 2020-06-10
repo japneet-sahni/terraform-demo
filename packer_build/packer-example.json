@@ -1,0 +1,20 @@
+{
+  "variables": {
+      "profile": "terraform"
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "us-east-1",
+    "source_ami": "ami-09d95fab7fff3776c",
+    "instance_type": "t2.micro",
+    "ssh_username": "ec2-user",
+    "ami_name": "packer-image {{timestamp}}",
+    "profile": "terraform"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "scripts": [  "scripts/install_software.sh"   ],
+    "execute_command": "{{ .Vars }} sudo -E sh '{{ .Path }}'",
+    "pause_before": "10s"
+  }]
+}
